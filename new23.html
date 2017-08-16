@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+ 
+    
+
+<svg width="350" height="160">
+  <!-- 60px x 10px margin -->
+  <g class="layer" transform="translate(60,10)">
+    <!-- cx = 270px * ($X / 3)
+                ^      ^   ^
+    width of graph  x-value max(x)
+
+          cy = 120px - (($Y / 80) * 120px)
+                 ^       ^     ^       ^
+      top of graph   y-value  max(y)  scale -->
+    <circle r="5" cx="0"   cy="105" />
+    <circle r="5" cx="50"  cy="90"  />
+    <circle r="5" cx="100" cy="60"  />
+    <circle r="5" cx="150" cy="0"   />
+    <circle r="5" cx="200"  cy="40" />
+
+    <g class="y axis">
+      <line x1="0" y1="0" x2="0" y2="120" style="stroke: black;"/>
+      <text x="-40" y="120" dy="5">$10</text>
+      <text x="-40" y="85"  dy="5">$20</text>
+      <text x="-40" y="45"  dy ="5">$25</text>
+      <text x="-40" y="25"  dy="5">$30</text>
+    </g>
+    <g class="x axis" transform="translate(0, 120)">
+      <line x1="0" y1="0" x2="270" y2="0" style="stroke: black;"/>
+
+      <text x="0"   y="20">Jan</text>
+      <text x="50" y="20">feb</text>
+      <text x="100" y="20">mar</text>
+      <text x="150" y="20">april</text>
+      <text x="200" y="20">may</text>
+<line x1="48" y1="-29" x2="0" y2="-15" style="stroke: black;"/>
+<line x1="50" y1="-30" x2="100" y2="-60" style="stroke: black"/>
+<line x1="50" y1="-35" x2="150" y2 ="-120" style="stroke: black"/>
+
+
+
+
+      
+
+    </g>
+  </g>
+</svg>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="http://d3js.org/d3.v4.min.js"></script>
+<script type="text/javascript">
+// DOM API
+var clickMe = document.getElementById('click-me');
+clickMe.onclick = function() {
+  if (this.style.backgroundColor) {
+    this.style.backgroundColor = '';
+  } else {
+    this.style.backgroundColor = 'red';
+  }
+}
+
+d3.selectAll('.hover-me')
+  .on('mouseover', function() {
+    this.style.backgroundColor = 'yellow';
+  })
+  .on('mouseleave', function() {
+    this.style.backgroundColor = '';
+  });
+    
+
+
+</script>
+
+
+</body>
+</html>
