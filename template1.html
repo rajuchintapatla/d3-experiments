@@ -3,8 +3,17 @@
 <head>
   <title></title>
 </head>
+<style> /* set the CSS */
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}
+
+</style>
 <body>
-<svg width="1000" height="1000">
+<svg  id =drawArea  width="1000" height="1000">
   <!-- 60px x 10px margin -->
   <g class="layer" transform="translate(60,10)">
     <!-- cx = 270px * ($X / 3)
@@ -71,13 +80,25 @@
   </svg>
 
 
-
-</body>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/javascript">
+    
+
+ var svg = d3.select("#drawArea")
+  .append("svg")
+  
+  var line = svg.append("line")
+  .style("stroke", "black")
+   .attr("x1", 150)
+   .attr("y1",140 )
+   .attr("y2",200)
+   .attr("x2",400)
+
 
 
   
 </script>
+</body>
+
 </html>
